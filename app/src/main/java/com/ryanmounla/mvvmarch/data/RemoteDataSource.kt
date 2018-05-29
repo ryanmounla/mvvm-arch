@@ -17,7 +17,7 @@ import retrofit2.Response
 
 class RemoteDataSource(private val context: Context) {
 
-    private val endpointService: EndpointService = RetrofitHelper.getInstance(context)!!.provideRetrofit()!!.create(EndpointService::class.java)
+    private val endpointService: EndpointService = RetrofitHelper.getInstance()!!.provideRetrofit()!!.create(EndpointService::class.java)
 
     val randomDogImage: LiveData<Image>
         get() {

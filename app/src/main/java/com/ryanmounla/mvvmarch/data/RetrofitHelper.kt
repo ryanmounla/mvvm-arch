@@ -1,8 +1,5 @@
 package com.ryanmounla.mvvmarch.data
 
-import android.content.Context
-
-
 import java.util.concurrent.TimeUnit
 
 import okhttp3.OkHttpClient
@@ -48,7 +45,7 @@ class RetrofitHelper {
 
         private var sInstance: RetrofitHelper? = null
 
-        fun getInstance(context: Context): RetrofitHelper? {
+        fun getInstance(): RetrofitHelper? {
             if (sInstance == null) {
                 sInstance = RetrofitHelper()
             }
