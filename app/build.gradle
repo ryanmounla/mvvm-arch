@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 27
@@ -21,6 +23,10 @@ android {
         sourceCompatibility 1.8
     }
 }
+
+repositories {
+    mavenCentral()
+}
 ext {
     supportLibVersion = '27.1.1'
     retrofit2Version = '2.4.0'
@@ -32,6 +38,9 @@ ext {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    //Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
     //Android Support Libs
     implementation "com.android.support:appcompat-v7:$supportLibVersion"
     implementation "com.android.support:design:$supportLibVersion"
@@ -39,7 +48,7 @@ dependencies {
 
     // ViewModel and LiveData
     implementation "android.arch.lifecycle:extensions:$archCompVersion"
-    annotationProcessor "android.arch.lifecycle:compiler:$archCompVersion"
+    kapt "android.arch.lifecycle:compiler:$archCompVersion"
 
     //Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit2Version"
@@ -51,10 +60,10 @@ dependencies {
 
     //ButterKnife
     implementation "com.jakewharton:butterknife:$butterKnifeVersion"
-    annotationProcessor "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
+    kapt "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
 
     //Glide
     implementation "com.github.bumptech.glide:glide:$glideVersion"
-    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+    kapt "com.github.bumptech.glide:compiler:$glideVersion"
 
 }
