@@ -3,7 +3,7 @@ Sample Android application demonstrating MVVM pattern using Android Architecture
 
 Libraries used on the sample project
 ------------------------------------
-* [AppCompat and DesignLibrary](http://developer.android.com/intl/es/tools/support-library/index.html)
+* [AppCompat and DesignLibrary](https://developer.android.com/topic/libraries/support-library/)
 * [Android Architecture Components](https://developer.android.com/topic/libraries/architecture/)
 * [Retrofit 2](http://square.github.io/retrofit/)
 * [OkHttp3](http://square.github.io/okhttp/)
